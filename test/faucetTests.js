@@ -21,15 +21,3 @@ describe('Faucet', function () {
     expect(await faucet.owner()).to.equal(owner.address);
   });
 });
-
-function alternateLetters(n) {
-  let result = '';
-  for (let i = 0; i < n; i++) {
-    if (i % 2 === 0) {
-      result += 'a';
-    } else {
-      result += 'A';
-    }
-  }
-  return result;
-}
