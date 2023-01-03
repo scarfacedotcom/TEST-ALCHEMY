@@ -11,7 +11,7 @@ describe('Faucet', function () {
 
     const [owner] = await ethers.getSigners();
 
-    let withdrawAmount = ethers.utils.parseUnits('1', 'ether');
+    let withdrawAmount = ethers.utils.parseUnits('2', 'ether');
 
     return { faucet, owner, withdrawAmount };
   }
@@ -26,4 +26,7 @@ describe('Faucet', function () {
     const { faucet, withdrawAmount } = await loadFixture(deployContractAndSetVariables);
     await expect(faucet.withdraw(withdrawAmount)).to.be.reverted;
   });
+
+  
 });
+
